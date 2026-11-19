@@ -64,6 +64,25 @@ npm test          # automated authority/integrity suite
 npm start         # ws://127.0.0.1:8787
 ```
 
+## Continuous integration
+
+`.github/workflows/unity-ci.yml` uses [GameCI](https://game.ci) to compile the project and run the
+EditMode suite on **every push and pull request**, then build a Linux x64 player (which also proves
+the editor tooling can generate the prototype scene from a clean checkout).
+
+Add these repository secrets before the first run (Settings → Secrets and variables → Actions):
+
+| Secret | Value |
+| --- | --- |
+| `UNITY_LICENSE` | contents of your `.ulf` licence file (Personal licences) |
+| `UNITY_EMAIL` | your Unity account email |
+| `UNITY_PASSWORD` | your Unity account password (alphanumeric; special characters break activation) |
+| `UNITY_SERIAL` | Plus/Pro serial — used instead of `UNITY_LICENSE` |
+
+Without the secrets the jobs fail at the activation step; nothing else in the repository is affected.
+CI runs the same code locally with `Project Infinity → 1. Configure Project` and
+`2. Build Prototype Scene`, so a red CI log is reproducible on a desktop.
+
 ## Design pillars
 
 1. **Skill over stats** — timing, spacing and parry windows beat level gaps; progression is capped

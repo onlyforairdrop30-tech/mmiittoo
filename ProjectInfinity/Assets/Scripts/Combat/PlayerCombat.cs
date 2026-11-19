@@ -142,7 +142,7 @@ namespace ProjectInfinity.Combat
             if (input.Ability3.Consume()) TryAbility(2);
             if (input.Ultimate.Consume()) TryUltimate();
 
-            bool wantsBlock = input.BlockHeld && _action == ActionState.Idle;
+            bool wantsBlock = input.Block && _action == ActionState.Idle;
             if (wantsBlock && !IsBlocking) BeginBlock();
             else if (!wantsBlock && IsBlocking) IsBlocking = false;
         }
