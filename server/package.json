@@ -1,0 +1,14 @@
+{
+  "name": "project-infinity-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Authoritative multiplayer backend for Project Infinity. Reference implementation: no external dependencies.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  }
+}
