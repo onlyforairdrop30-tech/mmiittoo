@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5363830aea1a84f9a4bcdb2808c170, type: 3}
+  m_Name: monster_rootwarden
+  m_EditorClassIdentifier: ProjectInfinity.Runtime::ProjectInfinity.Enemies.EnemyDefinition
+  enemyId: monster.rootwarden
+  displayName: The Rootwarden
+  archetype: 3
+  level: 8
+  maxHealth: 1100
+  attack: 18
+  defense: 14
+  attackRange: 5
+  attackCooldown: 1.7
+  windup: 0.45
+  aggroRange: 16
+  leashRange: 30
+  moveSpeed: 2.7
+  strafeBias: 0.35
+  baseXp: 900
+  goldReward: 120
+  loot:
+  - itemId: weapon.verdant_blade
+    chance: 0.9
+    min: 1
+    max: 2
+  tint: {r: 0.36, g: 0.29, b: 0.2, a: 1}
+  scale: 2.6
+  spawnRadius: 1.1

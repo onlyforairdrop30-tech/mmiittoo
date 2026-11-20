@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19be2351c24d40b44a83b69d67e64d02, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: ProjectInfinity.Runtime::ProjectInfinity.Inventory.ItemDatabase
+  items:
+  - {fileID: 11400000, guid: 7af007291697a094aabb0c2a36d07b05, type: 2}
+  - {fileID: 11400000, guid: 3e19a6d134918eb41906560f7a2fd8ea, type: 2}
+  - {fileID: 11400000, guid: f31b63cdf277d3847814278d408cbd34, type: 2}
+  - {fileID: 11400000, guid: b72cf07952ee07c4eb1150216c7211e3, type: 2}
+  - {fileID: 11400000, guid: e7ce3fd05546f1c48bfc793ae9c324a6, type: 2}

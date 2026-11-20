@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5363830aea1a84f9a4bcdb2808c170, type: 3}
+  m_Name: monster_stone_sentry
+  m_EditorClassIdentifier: ProjectInfinity.Runtime::ProjectInfinity.Enemies.EnemyDefinition
+  enemyId: monster.stone_sentry
+  displayName: Stone Sentry
+  archetype: 2
+  level: 5
+  maxHealth: 190
+  attack: 15
+  defense: 12
+  attackRange: 2.2
+  attackCooldown: 2.6
+  windup: 0.45
+  aggroRange: 16
+  leashRange: 30
+  moveSpeed: 2.9
+  strafeBias: 0.35
+  baseXp: 95
+  goldReward: 15
+  loot:
+  - itemId: weapon.verdant_blade
+    chance: 0.18
+    min: 1
+    max: 2
+  tint: {r: 0.46, g: 0.47, b: 0.42, a: 1}
+  scale: 1.35
+  spawnRadius: 1.1

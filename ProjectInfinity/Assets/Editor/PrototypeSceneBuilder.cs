@@ -496,7 +496,7 @@ namespace ProjectInfinity.EditorTools
             var ring = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
             ring.name = "TelegraphRing";
             Object.DestroyImmediate(ring.GetComponent<Collider>());
-            ring.transform.SetParent(root, false);
+            ring.transform.SetParent(root.transform, false);
             ring.transform.localPosition = new Vector3(0f, 0.06f, 0f);
             ring.transform.localScale = new Vector3(5f, 0.04f, 5f);
             ring.GetComponent<Renderer>().sharedMaterial = Mat("telegraph", new Color(0.95f, 0.35f, 0.25f));

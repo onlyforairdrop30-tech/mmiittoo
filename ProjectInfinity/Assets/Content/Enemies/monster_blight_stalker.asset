@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5363830aea1a84f9a4bcdb2808c170, type: 3}
+  m_Name: monster_blight_stalker
+  m_EditorClassIdentifier: ProjectInfinity.Runtime::ProjectInfinity.Enemies.EnemyDefinition
+  enemyId: monster.blight_stalker
+  displayName: Blight Stalker
+  archetype: 0
+  level: 3
+  maxHealth: 110
+  attack: 9
+  defense: 5
+  attackRange: 2
+  attackCooldown: 1.85
+  windup: 0.45
+  aggroRange: 16
+  leashRange: 30
+  moveSpeed: 3.9
+  strafeBias: 0.35
+  baseXp: 55
+  goldReward: 9
+  loot:
+  - itemId: material.ember_shard
+    chance: 0.75
+    min: 1
+    max: 2
+  tint: {r: 0.24, g: 0.42, b: 0.34, a: 1}
+  scale: 1
+  spawnRadius: 1.1

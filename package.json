@@ -1,0 +1,14 @@
+{
+  "name": "project-infinity",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Project Infinity - 3D Anime Action MMORPG",
+  "scripts": {
+    "start": "node server/src/server.js",
+    "test": "cd server && npm test",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+  }
+}

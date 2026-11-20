@@ -16,6 +16,44 @@ namespace ProjectInfinity.EditorTools
     public static class CiBuild
     {
         private const string OutputPath = "Builds/Linux/ProjectInfinity.x86_64";
+        private const string WindowsOutputPath = "Builds/Windows/ProjectInfinity.exe";
+
+        public static void BuildWindows64()
+        {
+            if (!File.Exists(PrototypeSceneBuilder.ScenePath))
+            {
+                Debug.Log("[Project Infinity] Scene missing from checkout; generating it before the build.");
+                if (!PrototypeSceneBuilder.Build())
+                {
+                    throw new BuildFailedException(
+                        "Prototype scene generation failed; see the errors logged above.");
+                }
+            }
+
+            ProjectConfigurator.Configure();
+
+            string directory = Path.GetDirectoryName(WindowsOutputPath);
+            if (!string.IsNullOrEmpty(directory)) Directory.CreateDirectory(directory);
+
+            var options = new BuildPlayerOptions
+            {
+                scenes = new[] { PrototypeSceneBuilder.ScenePath },
+                target = BuildTarget.StandaloneWindows64,
+                locationPathName = WindowsOutputPath,
+                options = BuildOptions.None
+            };
+
+            BuildReport report = BuildPipeline.BuildPlayer(options);
+            BuildSummary summary = report.summary;
+
+            Debug.Log($"[Project Infinity] Windows build {summary.result}: " +
+                      $"{summary.totalSize / (1024 * 1024)} MB, {summary.totalErrors} error(s).");
+
+            if (summary.result != BuildResult.Succeeded)
+            {
+                throw new BuildFailedException($"Build {summary.result} with {summary.totalErrors} error(s).");
+            }
+        }
 
         public static void BuildLinux64()
         {

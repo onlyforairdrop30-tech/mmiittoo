@@ -40,3 +40,16 @@ server/data/
 .env
 .env.*
 !.env.example
+
+# Agents & scratch
+.agent/
+.agents/
+.gemini/
+.gsd/
+scratch/
+GSD-STYLE.md
+PROJECT_RULES.md
+model_capabilities.yaml
+VERSION
+adapters/
+scripts/

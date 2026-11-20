@@ -46,6 +46,9 @@ namespace ProjectInfinity.Enemies
 
         public void Configure(EnemyDefinition def, Health target, ProceduralAnimator rig, Transform ring)
         {
+            if (Health == null) Health = GetComponent<Health>();
+            if (_agent == null) _agent = GetComponent<NavMeshAgent>();
+
             definition = def;
             _target = target;
             if (rig != null) animator = rig;
@@ -53,7 +56,7 @@ namespace ProjectInfinity.Enemies
 
             if (def != null)
             {
-                Health.Configure(def.maxHealth, def.defense, Faction.Hostile);
+                if (Health != null) Health.Configure(def.maxHealth, def.defense, Faction.Hostile);
                 if (_agent != null)
                 {
                     _agent.speed = def.moveSpeed;

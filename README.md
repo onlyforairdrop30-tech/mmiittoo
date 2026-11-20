@@ -55,13 +55,28 @@ and the builder logs which step failed.
 | Inventory | `Tab` | Close button on the panel |
 | Release cursor | `Esc` | n/a |
 
-## Run the backend
+## Quick Start
+
+### Windows (1-Click)
+Run `start.bat` in the repository root to start the backend server and launch Unity.
+
+### Docker (Multiplayer Backend)
+```bash
+docker compose up -d
+```
+The authoritative server will be running on `ws://127.0.0.1:8787` with health checks at `http://127.0.0.1:8787/health`.
+
+To stop:
+```bash
+docker compose down
+```
+
+## Run the backend directly
 
 ```bash
-cd server
-npm install
-npm test          # automated authority/integrity suite
-npm start         # ws://127.0.0.1:8787
+npm start          # ws://127.0.0.1:8787
+# or
+cd server && npm start
 ```
 
 ## Continuous integration

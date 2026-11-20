@@ -1,0 +1,14 @@
+.git
+.agents
+.agent
+.gemini
+.gsd
+ProjectInfinity/Library/
+ProjectInfinity/Temp/
+ProjectInfinity/Obj/
+ProjectInfinity/Build/
+ProjectInfinity/Builds/
+ProjectInfinity/Logs/
+ProjectInfinity/UserSettings/
+*.log
+node_modules/
